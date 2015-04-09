@@ -45,7 +45,10 @@ interface can be used for executing malicious javascript on a server.
 Screenshots
 -----------
 
-<img src="http://i.imgur.com/DOi3b.png" title="Viewing documents in a collection" />
+<img src="http://i.imgur.com/gKyz6Jq.png" title="Viewing documents in a collection" />
+
+
+<img src="http://i.imgur.com/UZY6ecC.png" title="Home page" />
 
 Click here for more screenshots: 
 [http://imgur.com/a/OTZHe](http://imgur.com/a/OTZHe)
