@@ -3,10 +3,17 @@ mongo-express
 
 Web-based MongoDB admin interface written with Node.js and express
 
-[![Build Status](https://secure.travis-ci.org/andzdroid/mongo-express.png?branch=master)](http://travis-ci.org/andzdroid/mongo-express) - Master (stable) branch
+[![Build Status](https://secure.travis-ci.org/lvduit/mongo-express.png?branch=master)](http://travis-ci.org/andzdroid/mongo-express) - Master (stable) branch
 
-[![Build Status](https://secure.travis-ci.org/andzdroid/mongo-express.png?branch=develop)](http://travis-ci.org/andzdroid/mongo-express) - Develop branch
+[![Build Status](https://secure.travis-ci.org/lvduit/mongo-express.png?branch=develop)](http://travis-ci.org/andzdroid/mongo-express) - Develop branch
 
+
+Contact 
+=============
+
+Van-Duyet Le (lvduit08 at gmail.com)
+
+Home: http://lvduit.com
 
 Features
 --------
@@ -59,19 +66,23 @@ These screenshots are from version 0.11.0.
 Usage
 -----
 
+Make sure your Nodejs and MongoDb are installed.
+
 **To install:**
 
-    npm install mongo-express
+Clone the script from Github
 
-Or if you want to install a global copy:
+    git clone https://github.com/lvduit/mongo-express.git
+    cd ./mongo-express
 
-    npm install -g mongo-express
+Install Node modules
+
+    npm install
 
 **To configure:**
 
-Copy or rename `config.default.js` into a new file called `config.js`.
 
-Fill in your MongoDB connection details, and any other options you want to change.
+Fill in your MongoDB connection details, and any other options you want to change on `config.js` file.
 
 **To run:**
 
