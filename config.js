@@ -50,10 +50,10 @@ module.exports = {
   },
   options: {
     //documentsPerPage: how many documents you want to see at once in collection view
-    documentsPerPage: 10,
+    documentsPerPage: 20,
     //editorTheme: Name of the theme you want to use for displaying documents
     //See http://codemirror.net/demo/theme.html for all examples
-    editorTheme: "rubyblue",
+    editorTheme: 'eclipse',
 
     //The options below aren't being used yet
 

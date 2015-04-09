@@ -5,7 +5,6 @@
 {% block breadcrumb %}
 <li>
   <a href="">Home</a>
-  <span class="divider">/</span>
 </li>
 <li class="active">
   {{ dbName }}
@@ -16,13 +15,13 @@
 {% block content %}
 <h2>Create Collection</h2>
 <form class="well form-inline" method="POST">
-    <div class="input-prepend">
-      <span class="add-on">{{ dbName }} . </span>
-      <input class="input-medium" type="text" id="collection" name="collection" placeholder="Collection Name" title="Collection Name">
+    <div class="form-group">
+      <label>{{ dbName }}</label>
+      <input class="form-control" type="text" id="collection" name="collection" placeholder="Collection Name" title="Collection Name">
     </div>
   <button type="submit" class="btn btn-primary">
-  <i class="icon-folder-open icon-white"></i>
-  Create collection
+    <i class="icon-folder-open icon-white"></i>
+    Create collection
   </button>
 </form>
 
@@ -57,23 +56,25 @@
 <table class="table table-bordered table-striped table-condensed">
   {% for c in colls %}
   <tr>
-    <td class="span2">
-      <a href="db/{{ dbName }}/{{ c }}" class="btn btn-success span2">
+    <td>
+      <a href="db/{{ dbName }}/{{ c }}" class="btn btn-success">
         <i class="icon-list-alt icon-white"></i> View
       </a>
     </td>
-	<td class="span2">
-	     <a href="db/{{ dbName }}/export/{{ c }}" class="btn btn-warning span2">
-	      <i class="icon-download icon-white"></i> Export
-	    </a>
-	</td>
-    <td><h3><a href="db/{{ dbName }}/{{ c }}">{{ c }}</a></h3></td>
-    <td class="span2">
-      <form method="POST" id="db-{{ dbName }}-{{ c }}" action="db/{{ dbName }}/{{ c }}" style="margin: 0px;">
+  	<td>
+  	     <a href="db/{{ dbName }}/export/{{ c }}" class="btn btn-warning">
+  	      <i class="icon-download icon-white"></i> Export
+  	    </a>
+  	</td>
+    <td>
+      <h3><a href="db/{{ dbName }}/{{ c }}">{{ c }}</a></h3>
+    </td>
+    <td>
+      <form method="POST" id="db-{{ dbName }}-{{ c }}" action="db/{{ dbName }}/{{ c }}">
         <input type="hidden" name="_method" value="delete">
         <button type="submit" class="hidden"></button>
       </form>
-      <button class="btn btn-danger span2 deleteButton" collection-name="{{ c }}" childof="db-{{ dbName }}-{{ c }}">
+      <button class="btn btn-danger deleteButton" data-trigger="hover" collection-name="{{ c }}" childof="db-{{ dbName }}-{{ c }}">
         <i class="icon-trash icon-white"></i>
         Delete
       </button>
