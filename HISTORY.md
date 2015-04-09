@@ -1,3 +1,7 @@
+0.20.1 
+------
+* Upgrade themes to bootstrap
+
 0.20.0
 ------
 
